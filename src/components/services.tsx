@@ -4,6 +4,18 @@ import Image from "next/image"
 import { ArrowUpRight, X, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z" />
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z" />
+  </svg>
+)
+
 const services = [
   {
     title: "Entrar com uma ação trabalhista",
@@ -35,12 +47,12 @@ export function Services() {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null)
 
   return (
-    <section id="servicos" className="py-24 bg-secondary/20 relative">
+    <section id="servicos" className="py-24 bg-secondary/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
           <div>
             <span className="text-primary font-bold text-xs uppercase tracking-widest">Nossas Áreas</span>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mt-2">Expertise que faz a diferença</h2>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold mt-2">Saiba como nosso escritório pode te ajudar de forma rápida</h2>
           </div>
           <p className="text-muted-foreground text-lg max-w-md">
             Atuação técnica e de alta conversão focada em resultados reais para garantir seus direitos.
@@ -80,11 +92,17 @@ export function Services() {
                 </div>
               </div>
 
-              <div className="p-6 pt-0">
-                <button className="text-sm font-bold text-primary inline-flex items-center gap-2 group/btn cursor-pointer">
-                  Falar com Especialista
-                  <span className="h-px w-6 bg-primary transform origin-left transition-transform group-hover/btn:scale-x-150" />
-                </button>
+              <div className="p-6 pt-0 flex justify-center w-full relative z-10">
+                <a
+                  href={`https://wa.me/5521997282115?text=${encodeURIComponent(service.whatsappMsg)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex items-center justify-center gap-2 h-12 px-6 w-full max-w-[280px] text-sm font-bold shadow-md hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white border-none cursor-pointer"
+                >
+                  <WhatsAppIcon className="h-6 w-6" />
+                  Falar no WhatsApp
+                </a>
               </div>
               
               {/* Decorative background element */}
@@ -136,21 +154,14 @@ export function Services() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href={`https://wa.me/5511999999999?text=${encodeURIComponent(selectedService.whatsappMsg)}`}
+                  href={`https://wa.me/5521997282115?text=${encodeURIComponent(selectedService.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1"
                 >
                   <Button className="h-14 px-8 rounded-xl font-bold text-lg gap-2 w-full bg-[#25D366] hover:bg-[#20ba5a] text-white cursor-pointer">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.08-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                    Falar com Especialista
+                    <WhatsAppIcon className="h-6 w-6" />
+                    Falar no WhatsApp
                   </Button>
                 </a>
                 <Button variant="outline" onClick={() => setSelectedService(null)} className="h-14 px-8 rounded-xl font-bold text-lg flex-1 cursor-pointer">

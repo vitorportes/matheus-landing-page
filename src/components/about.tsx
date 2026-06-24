@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react"
 
 export function About() {
   return (
-    <section id="sobre" className="py-32 bg-background">
+    <section id="sobre" className="py-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
@@ -25,8 +25,8 @@ export function About() {
                   <CheckCircle2 className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold font-serif">100%</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-widest font-bold">Comprometimento</p>
+                  <p className="text-lg font-bold font-serif text-primary leading-none mb-1">Rigor Técnico</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest font-bold leading-tight">Resguardo Jurídico</p>
                 </div>
               </div>
             </div>
@@ -34,19 +34,22 @@ export function About() {
           
           <div className="space-y-10">
             <div>
-              <span className="text-primary font-bold text-xs uppercase tracking-[0.3em]">Nossa História</span>
-              <h2 className="font-serif text-4xl md:text-6xl font-black mt-4 leading-tight">Expertise e Compromisso com a <span className="text-muted-foreground italic">Justiça Social</span></h2>
+              <span className="text-primary font-bold text-xs uppercase tracking-[0.3em]">Perfil Profissional</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-black mt-4 leading-tight">
+                Matheus Cassiano <br />
+                <span className="text-muted-foreground text-2xl font-sans block mt-2 font-normal">Advogado Trabalhista — OAB/RJ 218.906</span>
+              </h2>
             </div>
             
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed max-w-xl">
               <p>
-                Com anos de experiência dedicados à defesa dos direitos fundamentais, <strong className="text-foreground">Matheus Cassiano</strong> consolidou uma trajetória marcada pela excelência técnica e ética inabalável na advocacia.
+                <strong className="text-foreground">Matheus Cassiano</strong> é advogado com sólida especialização na área trabalhista. Sua atuação é pautada pelo rigor técnico e por uma conduta estritamente ética na condução de litígios e na assessoria jurídica preventiva.
               </p>
               <p>
-                Nosso escritório nasceu com o propósito de oferecer segurança jurídica em um cenário cada vez mais complexo. Acreditamos que cada caso é único e exige uma solução personalizada, estratégica e ágil.
+                O escritório oferece representação especializada para trabalhadores em causas de variadas complexidades, englobando reversão de justa causa, rescisão indireta, reconhecimento de vínculo empregatício e pleito de verbas devidas, além de prestar assessoria empresarial preventiva.
               </p>
               <p>
-                Seja na esfera trabalhista, previdenciária ou no suporte a entidades sindicais, nosso foco é garantir que a lei seja aplicada de forma justa, protegendo os interesses de quem constrói o país.
+                Com foco em resultados consistentes, cada caso é submetido a uma análise estratégica detalhada. O objetivo é assegurar o cumprimento integral da legislação trabalhista, proporcionando segurança jurídica e transparência em todas as fases do processo.
               </p>
             </div>
             
@@ -56,8 +59,8 @@ export function About() {
                 <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold">Anos de Atuação</p>
               </div>
               <div className="space-y-2">
-                <p className="font-serif text-5xl font-black text-primary">500+</p>
-                <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold">Casos de Sucesso</p>
+                <p className="font-serif text-5xl font-black text-primary">1500+</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold">Casos</p>
               </div>
             </div>
           </div>

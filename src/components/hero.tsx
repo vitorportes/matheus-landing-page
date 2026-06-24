@@ -16,7 +16,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function Hero() {
   return (
-    <section id="hero" className="relative pt-20 overflow-hidden h-screen min-h-[640px] lg:min-h-[700px] flex flex-col justify-end bg-[#0F163A]">
+    <section id="hero" className="relative pt-24 pb-0 lg:pt-28 overflow-hidden flex flex-col justify-end bg-[#0F163A]">
       {/* Background image covering the section */}
       <div 
         className="absolute inset-0 bg-cover bg-center" 
@@ -25,11 +25,11 @@ export function Hero() {
       {/* Deep Navy Blue overlay with controlled opacity and blur filter */}
       <div className="absolute inset-0 bg-[#0F163A]/80 backdrop-blur-[6px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-end">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-end w-full h-full pt-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-end">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-end w-full pt-6">
           
           {/* Left Column: Texts and CTAs (lg:col-span-6) */}
-          <div className="pb-4 lg:pb-16 pt-2 text-[#FFFBF8] lg:col-span-6 text-left flex flex-col justify-center h-full">
+          <div className="pb-4 lg:pb-16 pt-2 text-[#FFFBF8] lg:col-span-6 text-left flex flex-col justify-center">
             
             {/* Subtitle Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFBF8]/10 border border-[#FFFBF8]/20 text-[#FFFBF8] text-xs font-bold mb-3.5 uppercase tracking-[0.2em] w-fit shadow-sm backdrop-blur-sm">
@@ -38,26 +38,26 @@ export function Hero() {
             </div>
 
             {/* Impact Headline */}
-            <h1 className="font-serif text-2xl sm:text-4xl lg:text-6xl font-black tracking-tight mb-3.5 leading-[1.15]">
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-black tracking-tight mb-3.5 leading-[1.15]">
               Segurança Jurídica e <br />
               <span className="text-[#FFFBF8] italic opacity-95">Defesa do Trabalhador</span>
             </h1>
 
             {/* Description Paragraph */}
-            <p className="text-xs sm:text-base md:text-lg text-[#FFFBF8]/85 mb-5 max-w-2xl leading-relaxed">
-              Soluções jurídicas personalizadas com foco na proteção dos seus direitos. Expertise reconhecida em Direito Trabalhista e Previdenciário.
+            <p className="text-sm sm:text-base md:text-lg text-[#FFFBF8]/85 mb-5 max-w-2xl leading-relaxed">
+              Soluções jurídicas personalizadas com foco na proteção dos seus direitos. Expertise reconhecida em Direito Trabalhista.
             </p>
 
             {/* Action Buttons (CTAs) */}
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <a 
-                href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20o%20Dr.%20Matheus."
+                href="https://wa.me/5521997282115?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20o%20Dr.%20Matheus."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
                 <Button size="lg" className="h-16 px-10 text-lg font-bold shadow-xl shadow-emerald-500/10 hover:shadow-emerald-500/30 transition-all rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white border-none cursor-pointer w-full justify-center gap-2">
-                  <WhatsAppIcon className="h-6 w-6" />
+                  <WhatsAppIcon className="h-7 w-7" />
                   Fale agora com um advogado
                 </Button>
               </a>
@@ -67,11 +67,11 @@ export function Hero() {
             <div className="flex items-center gap-6 text-[#FFFBF8]/60">
               <div className="flex items-center gap-2">
                 <Scale className="h-4.5 w-4.5 text-emerald-400/80" />
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest">Justiça Ética</span>
+                <span className="text-xs font-bold uppercase tracking-widest">Justiça Ética</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-4.5 w-4.5 text-emerald-400/80" />
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest">Excelência Jurídica</span>
+                <span className="text-xs font-bold uppercase tracking-widest">Excelência Jurídica</span>
               </div>
             </div>
 
@@ -79,10 +79,10 @@ export function Hero() {
 
           {/* Right Column: Profile Image (lg:col-span-6) */}
           {/* Mantém o container alinhado estritamente à base */}
-          <div className="w-full lg:col-span-6 flex justify-center lg:justify-end items-end h-[40vh] sm:h-[50vh] lg:h-[85vh] relative min-h-[350px] lg:min-h-[550px]">
-            <div className="relative w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[560px] h-full flex items-end">
+          <div className="w-full lg:col-span-6 flex justify-center lg:justify-end items-end relative">
+            <div className="relative w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[560px] h-[350px] sm:h-[450px] lg:h-[600px] flex items-end">
               <Image
-              src="/assets/images/hero-section-matheus.png"
+              src="/assets/images/hero-matheus.png"
               alt="Matheus Cassiano"
               fill
               priority

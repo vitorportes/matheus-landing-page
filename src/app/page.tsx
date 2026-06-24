@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-hidden w-full">
         <Hero />
         <Services />
         <About />

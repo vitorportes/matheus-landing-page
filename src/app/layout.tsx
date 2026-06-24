@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${montserrat.variable} ${lora.variable}`}>
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="pt-BR" className={`${montserrat.variable} ${lora.variable} overflow-x-hidden w-full`}>
+      <body className="min-h-screen bg-background font-sans antialiased overflow-x-hidden w-full">
         {children}
       </body>
     </html>

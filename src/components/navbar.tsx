@@ -26,10 +26,23 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[#0F163A]/90 backdrop-blur-md border-b border-white/10 shadow-lg" : "bg-transparent border-b border-transparent"}`}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between h-20 items-center">
           <Link href="/" className="flex items-center gap-3 group">
             <Image
@@ -37,10 +50,10 @@ export function Navbar() {
               alt="Logo Matheus Cassiano"
               width={200}
               height={60}
-              className="h-14 w-auto transition-transform group-hover:scale-105"
+              className="h-14 w-auto transition-transform group-hover:scale-105 brightness-0 invert"
               priority
             />
-            <span className="font-serif text-lg md:text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
+            <span className="font-serif text-lg md:text-2xl font-bold tracking-tight text-white whitespace-nowrap">
               Matheus Cassiano
             </span>
           </Link>
@@ -51,20 +64,20 @@ export function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
+                  className="text-sm font-bold uppercase tracking-widest text-white/80 hover:text-white transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
             <a 
-              href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20o%20Dr.%20Matheus."
+              href="https://wa.me/5521997282115?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20o%20Dr.%20Matheus."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
               <Button className="font-bold rounded-xl px-5 h-11 gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-emerald-500/10 border-none cursor-pointer">
-                <WhatsAppIcon className="h-5 w-5" />
+                <WhatsAppIcon className="h-6 w-6" />
                 Agendar uma consulta
               </Button>
             </a>
@@ -73,7 +86,7 @@ export function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-primary focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white/80 hover:text-white focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -83,13 +96,13 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-border animate-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-[#0F163A]/95 backdrop-blur-md border-b border-white/10 animate-in slide-in-from-top duration-300">
           <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3 text-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-4 text-lg font-serif font-bold text-muted-foreground hover:text-primary transition-colors border-b border-border/50 last:border-0"
+                className="block px-3 py-4 text-lg font-serif font-bold text-white/80 hover:text-white transition-colors border-b border-white/10 last:border-0"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -97,13 +110,13 @@ export function Navbar() {
             ))}
             <div className="px-3 py-4">
               <a 
-                href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20o%20Dr.%20Matheus."
+                href="https://wa.me/5521997282115?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20o%20Dr.%20Matheus."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full"
               >
                 <Button className="w-full h-12 font-bold text-lg gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg border-none cursor-pointer flex items-center justify-center">
-                  <WhatsAppIcon className="h-6 w-6" />
+                  <WhatsAppIcon className="h-7 w-7" />
                   Agendar uma consulta
                 </Button>
               </a>
