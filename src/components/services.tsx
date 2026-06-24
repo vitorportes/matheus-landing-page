@@ -46,6 +46,30 @@ const services = [
 export function Services() {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null)
 
+  // Handle scroll lock and browser history back button modal closure
+  React.useEffect(() => {
+    if (selectedService) {
+      document.body.style.overflow = "hidden"
+      if (window.location.hash !== "#servico") {
+        window.history.pushState({ modalOpen: "service" }, "", "#servico")
+      }
+    } else {
+      document.body.style.overflow = "unset"
+      if (window.location.hash === "#servico") {
+        window.history.back()
+      }
+    }
+
+    const handlePopState = () => {
+      if (selectedService) {
+        setSelectedService(null)
+      }
+    }
+
+    window.addEventListener("popstate", handlePopState)
+    return () => window.removeEventListener("popstate", handlePopState)
+  }, [selectedService])
+
   return (
     <section id="servicos" className="py-24 bg-secondary/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,6 +101,7 @@ export function Services() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 380px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -114,9 +139,9 @@ export function Services() {
 
       {/* Service Detail Modal */}
       {selectedService && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 bg-background/80 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-300">
           <div 
-            className="bg-background border border-border shadow-2xl rounded-3xl max-w-2xl w-full overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-10 duration-500"
+            className="bg-background border border-border shadow-2xl rounded-3xl max-w-2xl w-full my-auto overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-10 duration-500"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative p-8 md:p-12">
@@ -133,6 +158,7 @@ export function Services() {
                   src={selectedService.image}
                   alt={selectedService.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 672px"
                   className="object-cover"
                 />
               </div>

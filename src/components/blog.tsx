@@ -98,13 +98,28 @@ const posts = [
 export function Blog() {
   const [selectedPost, setSelectedPost] = React.useState<typeof posts[0] | null>(null)
 
-  // Lock scroll when modal is open
+  // Handle scroll lock and browser history back button modal closure
   React.useEffect(() => {
     if (selectedPost) {
       document.body.style.overflow = "hidden"
+      if (window.location.hash !== "#artigo") {
+        window.history.pushState({ modalOpen: "blog" }, "", "#artigo")
+      }
     } else {
       document.body.style.overflow = "unset"
+      if (window.location.hash === "#artigo") {
+        window.history.back()
+      }
     }
+
+    const handlePopState = () => {
+      if (selectedPost) {
+        setSelectedPost(null)
+      }
+    }
+
+    window.addEventListener("popstate", handlePopState)
+    return () => window.removeEventListener("popstate", handlePopState)
   }, [selectedPost])
 
   return (
@@ -138,6 +153,7 @@ export function Blog() {
                     src={post.image}
                     alt={post.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 380px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
@@ -219,6 +235,7 @@ export function Blog() {
                     src={selectedPost.image}
                     alt={selectedPost.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 896px"
                     className="object-cover"
                   />
                 </div>

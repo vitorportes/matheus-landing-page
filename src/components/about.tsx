@@ -12,6 +12,7 @@ export function About() {
                  src="/assets/images/sobre-foto.jpg"
                  alt="Foto de perfil de Matheus Cassiano"
                  fill
+                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 580px"
                  className="object-cover"
                />
             </div>
