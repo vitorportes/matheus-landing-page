@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ShieldCheck, Scale, Award } from "lucide-react"
+import { ShieldCheck, Scale, Award, MapPin } from "lucide-react"
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -29,7 +29,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-end w-full pt-6">
           
           {/* Left Column: Texts and CTAs (lg:col-span-6) */}
-          <div className="pb-4 lg:pb-16 pt-2 text-[#FFFBF8] lg:col-span-6 text-left flex flex-col justify-center">
+          <div className="pb-4 lg:pb-16 pt-2 text-[#FFFBF8] lg:col-span-6 text-left flex flex-col justify-center lg:self-center">
             
             {/* Subtitle Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFBF8]/10 border border-[#FFFBF8]/20 text-[#FFFBF8] text-xs font-bold mb-3.5 uppercase tracking-[0.2em] w-fit shadow-sm backdrop-blur-sm">
@@ -39,12 +39,12 @@ export function Hero() {
 
             {/* Impact Headline */}
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3.5 leading-[1.15]">
-              Escritório de Advocacia Online pronto para <span className="text-emerald-400 italic font-serif font-semibold">garantir os seus direitos trabalhistas</span> ou <span className="text-emerald-400 italic font-serif font-semibold">estruturar a gestão jurídica da sua empresa</span>.
+              Seus direitos trabalhistas têm um advogado <span className="text-emerald-400 italic font-serif font-semibold">pronto para defendê-los</span>.
             </h1>
 
             {/* Description Paragraph */}
             <p className="text-sm sm:text-base md:text-lg text-[#FFFBF8]/85 mb-5 max-w-2xl leading-relaxed">
-              Atendimento especializado e sem burocracia para proteger você e o seu patrimônio de qualquer lugar.
+              Atendimento online, especializado e sem burocracia para trabalhadores e empresas em todo o Brasil.
             </p>
 
             {/* Action Buttons (CTAs) */}
@@ -63,7 +63,7 @@ export function Hero() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex items-center gap-6 text-[#FFFBF8]/60">
+            <div className="flex flex-wrap lg:flex-nowrap items-center gap-x-6 gap-y-3 text-[#FFFBF8]/60 whitespace-nowrap">
               <div className="flex items-center gap-2">
                 <Scale className="h-4.5 w-4.5 text-emerald-400/80" />
                 <span className="text-xs font-bold uppercase tracking-widest">Justiça Ética</span>
@@ -72,13 +72,17 @@ export function Hero() {
                 <Award className="h-4.5 w-4.5 text-emerald-400/80" />
                 <span className="text-xs font-bold uppercase tracking-widest">Excelência Jurídica</span>
               </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4.5 w-4.5 text-emerald-400/80" />
+                <span className="text-xs font-bold uppercase tracking-widest">Atendimento Nacional</span>
+              </div>
             </div>
 
           </div>
 
           {/* Right Column: Profile Image (lg:col-span-6) */}
           {/* Mantém o container alinhado estritamente à base */}
-          <div className="w-full lg:col-span-6 flex justify-center lg:justify-end items-end relative">
+          <div className="w-full lg:col-span-6 flex justify-center lg:justify-end items-end relative lg:self-end">
             <div className="relative w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[560px] h-[350px] sm:h-[450px] lg:h-[600px] flex items-end">
               <Image
               src="/assets/images/hero-matheus.png"
