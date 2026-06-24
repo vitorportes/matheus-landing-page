@@ -38,14 +38,13 @@ export function Hero() {
             </div>
 
             {/* Impact Headline */}
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-black tracking-tight mb-3.5 leading-[1.15]">
-              Segurança Jurídica e <br />
-              <span className="text-[#FFFBF8] italic opacity-95">Defesa do Trabalhador</span>
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3.5 leading-[1.15]">
+              Escritório de Advocacia Online pronto para <span className="text-emerald-400 italic font-serif font-semibold">garantir os seus direitos trabalhistas</span> ou <span className="text-emerald-400 italic font-serif font-semibold">estruturar a gestão jurídica da sua empresa</span>.
             </h1>
 
             {/* Description Paragraph */}
             <p className="text-sm sm:text-base md:text-lg text-[#FFFBF8]/85 mb-5 max-w-2xl leading-relaxed">
-              Soluções jurídicas personalizadas com foco na proteção dos seus direitos. Expertise reconhecida em Direito Trabalhista.
+              Atendimento especializado e sem burocracia para proteger você e o seu patrimônio de qualquer lugar.
             </p>
 
             {/* Action Buttons (CTAs) */}
