@@ -16,7 +16,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function Hero() {
   return (
-    <section id="hero" className="relative pt-24 pb-0 lg:pt-28 overflow-hidden flex flex-col justify-end bg-[#0F163A]">
+    <section id="hero" className="relative pt-16 pb-0 lg:pt-28 overflow-hidden flex flex-col justify-end bg-[#0F163A]">
       {/* Background image covering the section */}
       <div 
         className="absolute inset-0 bg-cover bg-center" 
