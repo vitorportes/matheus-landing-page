@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { name: "Início", href: "#hero" },
-  { name: "Serviços", href: "#servicos" },
-  { name: "Sobre", href: "#sobre" },
-  { name: "Blog", href: "#blog" },
+  { name: "Início", href: "/#hero" },
+  { name: "Serviços", href: "/#servicos" },
+  { name: "Sobre", href: "/#sobre" },
+  { name: "Blog", href: "/#blog" },
 ]
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (

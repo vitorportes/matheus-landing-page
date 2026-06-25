@@ -22,7 +22,7 @@ const services = [
     description: "Teve seus direitos desrespeitados? Avaliamos seu caso detalhadamente para garantir tudo o que a lei lhe assegura.",
     fullDescription: "Se você foi demitido, não recebeu suas verbas rescisórias, trabalhou sem registro em carteira, ou sofreu abusos no ambiente de trabalho (como assédio moral ou desvio de função), nós ajudamos você a buscar a devida reparação na Justiça do Trabalho. Atuamos de forma ágil, segura e com foco total em garantir os seus direitos.",
     benefits: ["Reivindicação de Horas Extras e FGTS", "Reversão de Justa Causa", "Indenização por Assédio/Danos Morais", "Reconhecimento de Vínculo de Emprego"],
-    image: "/assets/images/servico-acao-trabalhista.jpg",
+    image: "https://trabalhistacred.com.br/wp-content/uploads/2022/11/processo-trabalhista-passo-a-passo.jpg",
     whatsappMsg: "Olá, gostaria de falar sobre como entrar com uma ação trabalhista.",
   },
   {
@@ -30,7 +30,7 @@ const services = [
     description: "Realizamos cálculos precisos e detalhados de rescisão, férias, 13º e horas extras para você não perder nenhum centavo.",
     fullDescription: "Muitas empresas cometem erros na hora de calcular a rescisão contratual. Oferecemos um serviço especializado de cálculo e auditoria de verbas rescisórias, avaliando detalhadamente férias vencidas/proporcionais, 13º salário, aviso prévio, saldo de salário, FGTS e multa de 40%.",
     benefits: ["Cálculo Rescisório Detalhado", "Cálculo de Horas Extras Acumuladas", "Auditoria de FGTS e Multas", "Simulação de Acordo Trabalhista"],
-    image: "/assets/images/servico-calcular-verbas.jpg",
+    image: "https://www.infomoney.com.br/wp-content/uploads/2019/06/dinheiro-real.jpg?fit=900%2C600&quality=50&strip=all",
     whatsappMsg: "Olá, gostaria de realizar o cálculo das minhas verbas trabalhistas.",
   },
   {
@@ -38,7 +38,7 @@ const services = [
     description: "Assessoria jurídica preventiva trabalhista para mitigar riscos, elaborar contratos seguros e evitar passivos judiciais.",
     fullDescription: "Evite processos trabalhistas antes mesmo que eles aconteçam. Nossa assessoria jurídica preventiva para empresas ajuda a estruturar contratos de trabalho robustos, adequar o negócio às normas de segurança, planejar demissões de forma segura e negociar acordos coletivos favoráveis, mitigando riscos financeiros.",
     benefits: ["Prevenção de Processos Trabalhistas", "Elaboração de Contratos Blindados", "Auditoria de Práticas Trabalhistas", "Defesa em Ações Judiciais e Multas"],
-    image: "/assets/images/servico-consultoria-empresa.jpg",
+    image: "https://www.ralphlichotti.com.br/uploads/img/blog_posts/1/d2e4b57429498f19ef20080e9aafea20.jpg",
     whatsappMsg: "Olá, gostaria de uma consultoria trabalhista para a minha empresa.",
   },
 ]
