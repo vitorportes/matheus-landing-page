@@ -12,7 +12,7 @@ export interface Post {
 export const posts: Post[] = [
   {
     title: "Rescisão indireta: quando o empregado pode encerrar o contrato por falta grave da empresa",
-    date: "25 Jun, 2026",
+    date: "18 Jun, 2026",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -39,7 +39,7 @@ export const posts: Post[] = [
   },
   {
     title: "Teletrabalho: quais são os direitos e deveres de empregados e empresas?",
-    date: "24 Jun, 2026",
+    date: "12 Mai, 2026",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -66,7 +66,7 @@ export const posts: Post[] = [
   },
   {
     title: "Trabalho autônomo: como proteger seus direitos e reduzir riscos",
-    date: "23 Jun, 2026",
+    date: "05 Abr, 2026",
     category: "Contratos",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -93,7 +93,7 @@ export const posts: Post[] = [
   },
   {
     title: "Acordo trabalhista: quando negociar pode ser uma boa decisão",
-    date: "22 Jun, 2026",
+    date: "20 Mar, 2026",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -120,7 +120,7 @@ export const posts: Post[] = [
   },
   {
     title: "Trabalho temporário: regras, limites e direitos do trabalhador",
-    date: "21 Jun, 2026",
+    date: "15 Jan, 2026",
     category: "Direitos",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -147,7 +147,7 @@ export const posts: Post[] = [
   },
   {
     title: "Férias remuneradas: entenda prazos, pagamento e principais regras",
-    date: "20 Jun, 2026",
+    date: "18 Dez, 2025",
     category: "Direitos",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -174,7 +174,7 @@ export const posts: Post[] = [
   },
   {
     title: "Pejotização: quando o trabalho como pessoa jurídica pode esconder um vínculo de emprego",
-    date: "19 Jun, 2026",
+    date: "10 Out, 2025",
     category: "Contratos",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -201,7 +201,7 @@ export const posts: Post[] = [
   },
   {
     title: "Trabalho por aplicativo: o que pode caracterizar vínculo empregatício",
-    date: "18 Jun, 2026",
+    date: "15 Set, 2025",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -228,7 +228,7 @@ export const posts: Post[] = [
   },
   {
     title: "Convenção coletiva: por que o trabalhador deve conhecer as regras da categoria",
-    date: "17 Jun, 2026",
+    date: "05 Jul, 2025",
     category: "Sindicatos",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -255,7 +255,7 @@ export const posts: Post[] = [
   },
   {
     title: "Processo trabalhista: por que o acompanhamento jurídico faz diferença",
-    date: "16 Jun, 2026",
+    date: "18 Mai, 2025",
     category: "Processual",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -282,7 +282,7 @@ export const posts: Post[] = [
   },
   {
     title: "Reforma trabalhista: mudanças que continuam impactando empregados e empresas",
-    date: "15 Jun, 2026",
+    date: "20 Mar, 2025",
     category: "Legislação",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -309,7 +309,7 @@ export const posts: Post[] = [
   },
   {
     title: "Adicional de insalubridade: quem pode receber e como o direito é comprovado",
-    date: "14 Jun, 2026",
+    date: "12 Jan, 2025",
     category: "Saúde",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -336,7 +336,7 @@ export const posts: Post[] = [
   },
   {
     title: "Fim de ano: décimo terceiro, férias e trabalho em feriados",
-    date: "13 Jun, 2026",
+    date: "10 Dez, 2024",
     category: "Direitos",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -363,7 +363,7 @@ export const posts: Post[] = [
   },
   {
     title: "Jornada 12×36: quando podem existir horas extras",
-    date: "12 Jun, 2026",
+    date: "15 Out, 2024",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -390,7 +390,7 @@ export const posts: Post[] = [
   },
   {
     title: "Cargo de confiança: quando o empregado pode ter direito a horas extras",
-    date: "11 Jun, 2026",
+    date: "22 Ago, 2024",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -417,7 +417,7 @@ export const posts: Post[] = [
   },
   {
     title: "Salário pago “por fora”: quais direitos podem ser afetados",
-    date: "10 Jun, 2026",
+    date: "05 Jun, 2024",
     category: "Trabalhista",
     readTime: "3 min",
     author: "Matheus Cassiano",
@@ -444,7 +444,7 @@ export const posts: Post[] = [
   },
   {
     title: "Direitos dos bancários: jornada especial, intervalos e gratificações",
-    date: "09 Jun, 2026",
+    date: "14 Fev, 2024",
     category: "Categorias",
     readTime: "3 min",
     author: "Matheus Cassiano",
